@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+
+  <link rel="manifest" href="manifest.json" />
+<!-- ios support -->
+  <link rel="apple-touch-icon" href="images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-128x128.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-152x152.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" href="images/icons/icon-512x512.png" />
+  <meta name="apple-mobile-web-app-status-bar" content="#db4938" />
+  <meta name="theme-color" content="#db4938" />
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@500&display=swap" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="MaterialDesignFonts/css/materialdesignicons.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <title>Hymnals</title>
+
+</head>
+<body  style="font-family: 'Muli' sans-serif;">
+  <header>
+   <div class="navbar-fixed">
+    <nav class="" role="navigation">
+      <div class="nav-wrapper container"><a id="logo-container" href="#" style="font-size: 20px;">Index </a>
+        <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="mdi mdi-menu"></i></a>
+      </div>
+
+    </nav>
+   </div>
+
+    <ul id="nav-mobile" class="sidenav sidenav-fixed">
+      <li>
+        <div class="background">
+          <div class="carousel carousel-slider center">
+            <div class="carousel-fixed-item">
+              <div class="card" style="width: 200px; opacity: 0.8;">
+                <p style="font-weight: bolder; font-size: 20px;">SDA Hymnals</p>
+              </div>
+            </div>
+            <div class="carousel-item" href="#one!">
+              <img src="img/sunflower.jpeg" alt="">
+            </div>
+            <div class="carousel-item" href="#two!">
+              <img src="img/lion.jpg" alt="">
+            </div>
+            <div class="carousel-item" href="#three!">
+              <img src="img/nature.jpg" alt="">
+            </div>
+            <div class="carousel-item" href="#four!">
+              <img src="img/veges.jpeg" alt="">
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="index.html"><i class="mdi mdi-format-list-bulleted mdi-24px"></i>Topical Index</a></li>
+      <li><a href="favorites.html"><i class="mdi mdi-heart mdi-24px"></i>Favorites</a></li>
+      <li><a href="#modal1" class="modal-trigger"><i class="mdi mdi-dialpad mdi-24px"></i>Search</a></li>
+      <li><a class="subheader">Information</a></li>
+      <li><a href="settings.html"><i class="mdi mdi-settings mdi-24px"></i>Settings</a></li>
+      <li><a href="#"  id="sendEmail"><i class="mdi mdi-help-circle mdi-24px"></i>Help & Feedback</a></li>
+      <li><a id="aboutApp"><i class="mdi mdi-information-outline mdi-24px"></i>About</a></li>
+      <li><a id="toggle" class="dark-toggle" href="#" onclick="switchMode()" title="Dark/light"><i class="mdi mdi-brightness-4 mdi-24px"></i> Light/Dark</a></li>
+
+    </ul>
+  </header>
+  
+  <main> 
+    <div class="row" id="content">
+      
+    </div>
+
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large green darken-3 waves-effect btn  modal-trigger" href="#modal1">
+        <i class="mdi mdi-dialpad"></i>
+      </a>
+    </div>
+    <div id="modal1" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col s11 m11">
+              <div class="input-field col s12 m12">
+                <input disabled class="validate" type="tel" id="search" style="font-size: 30px;">
+                <i class="mdi mdi-backspace prefix" id="delete" style="cursor: pointer;"></i>
+              </div>
+          </div>
+        </div>
+        <table class="centered table-small">
+          
+          <tbody>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="1">1</button></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="2">2</button></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="3">3</button></td>
+          </tbody>
+          <tbody>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="4">4</button></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="5">5</button></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="6">6</button></td>
+          </tbody>
+          <tbody>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="7">7</button></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="8">8</button></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="9">9</button></td>
+          </tbody>
+          <tbody>
+            <td></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="0">0</button></td>
+            <td></td>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn green darken-3 waves-effect" id="findSong">search</a>
+        <a href="#" class="modal-close btn green darken-3 waves-effect">cancel</a>
+      </div>
+    </div>
+    
+    
+  </main>
+
+  <footer class="page-footer orange">
+      <div class="container center">
+      Made with <i class="mdi mdi-heart mdi-18px" style="color: red;"></i> by Brian Owino</a> <br>
+      Inspired by <a class="orange-text text-lighten-4" href="http://materializecss.com">Materialize</a> <br>
+      </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.modal').modal();
+    })
+  </script>
+  <script>
+    var data = {
+      "songs": [
+          {
+            "id":"song1",
+            "title":"001 - Nyasachwa man Malo",
+            "author":"Reginald herber",
+            "url":"songs/song1.html",
+            "number": 1
+          },
+          {
+            "id":"song2",
+            "title":"002 - Wapaki Nyasaye",
+            "author":"Wm P. Mackay",
+            "url":"songs/song2.html",
+            "number": 2
+          },
+          {
+            "id":"song3",
+            "title":"003 - Duong Obed ni Wuonwa",
+            "author":"Fanny J.  Crosby",
+            "url":"songs/song3.html",
+            "number": 3
+          },
+          {
+            "id":"song4",
+            "title":"004 - Nying Yesu Mondo Yudi Pak",
+            "author":"Edward Perronet",
+            "url":"songs/song4.html",
+            "number": 4
+          },
+          {
+            "id":"song5",
+            "title":"005 - To Pakuru Ruoth",
+            "author":"Robert Grant",
+            "url":"songs/song5.html",
+            "number": 5
+          },
+          {
+            "id":"song6",
+            "title":"006 - Wuonwa Wabironi",
+            "author":"W.  J.  Bostwick",
+            "url":"songs/song6.html",
+            "number": 6
+          },
+          {
+            "id":"song7",
+            "title":"007 - Nyasaye Indi Jakonywa",
+            "author":"Isaac Watts",
+            "url":"songs/song7.html",
+            "number": 7
+          },
+          {
+            "id":"song8",
+            "title":"008 - Winji Yuakna",
+            "author":"W.  H.  Doane",
+            "url":"songs/song8.html",
+            "number": 8
+          },
+          {
+            "id":"song9",
+            "title":"009 - Jachuechna Gi Ruotha",
+            "author":"Anne Steele",
+            "url":"songs/song9.html",
+            "number": 9
+          },
+          {
+            "id":"song10",
+            "title":"010 - Kristo In Wuon Ng'uono Duto",
+            "author":"Robert Robinson",
+            "url":"songs/song10.html",
+            "number": 10
+          },
+          {
+            "id":"song11",
+            "title":"011 - Yesu Isesingo",
+            "author":"Dr. W.O. Perkins",
+            "url":"songs/song11.html",
+            "number": 11
+          },
+          {
+            "id":"song12",
+            "title":"012 - Ji Duto Mondo Wer Wendni",
+            "author":"R.  E.  Hudson",
+            "url":"songs/song12.html",
+            "number": 12
+          },
+          {
+            "id":"song13",
+            "title":"013 - Paki Nyasaye Mogwedhowa",
+            "author":"Guillaume Franc",
+            "url":"songs/song13.html",
+            "number": 13
+          },
+          {
+            "id":"song14",
+            "title":"014 - Nyasacha Mond Awuoth Kodi",
+            "author":"L. D. Avery Stuttle",
+            "url":"songs/song14.html",
+            "number": 14
+          },
+          {
+            "id":"song15",
+            "title":"015 - Wuo Gi Chunya Ruoth Yesu",
+            "author":"Lycurgus L. Pickettn",
+            "url":"songs/song15.html",
+            "number": 15
+          },
+          {
+            "id":"song16",
+            "title":"016 - Ruoth Maler Adwari Pile",
+            "author":"F. E Belden",
+            "url":"songs/song16.html",
+            "number": 16
+          },
+          {
+            "id":"song17",
+            "title":"017 - Kristo Ok An",
+            "author":"Albert Benjamin Simpson",
+            "url":"songs/song17.html",
+            "number": 17
+          },
+          {
+            "id":"song18",
+            "title":"018 - Yesu Mond Itawa Pile",
+            "author":"Wm. B.  Bradbury",
+            "url":"songs/song18.html",
+            "number": 18
+          },
+          {
+            "id":"song19",
+            "title":"019 - Ka Ma Yesu Chon Notho E Yath",
+            "author":"Rev.  J.H. Stockton",
+            "url":"songs/song19.html",
+            "number": 19
+          },
+          {
+            "id":"song20",
+            "title":"020 - Nyasachwa En E Lwandawa",
+            "author":"Vernon J.  Charlesworth",
+            "url":"songs/song20.html",
+            "number": 20
+          },
+          {
+            "id":"song21",
+            "title":"021 - Adwaro Ket Kod Yesu",
+            "author":"W. H. Doane",
+            "url":"songs/song21.html",
+            "number": 21
+          },
+          {
+            "id":"song22",
+            "title":"022 - Kik Ibarna, Yaye Jakonya",
+            "author":"Fanny J. Crosby",
+            "url":"songs/song22.html",
+            "number": 22
+          },
+          {
+            "id":"song23",
+            "title":"023 - Aheri, Aheri",
+            "author":"Jer. Ingalls",
+            "url":"songs/song23.html",
+            "number": 23
+          },
+          {
+            "id":"song24",
+            "title":"024 - Jawarna To Ni Yesu",
+            "author":"Unknown",
+            "url":"songs/song24.html",
+            "number": 24
+          },
+          {
+          "id":"song25",
+          "title":"025 - In E Ngimana Mochwere",
+          "author":"Fanny J. Crosby",
+          "url":"songs/song25.html",
+          "number": 25
+          },
+          {
+          "id":"song26",
+          "title":"026 - Ji Duto Te Mondo Giwer",
+          "author":"Charles Wesley",
+          "url":"songs/song26.html",
+          "number": 26
+          },
+          {
+          "id":"song27",
+          "title":"027 - To En Ng`A Man E Kund Dhok",
+          "author":"Unknown",
+          "url":"songs/song27.html",
+          "number": 27
+          },
+          {
+          "id":"song28",
+          "title":"028 - Nying Mamit E Piny Gi Polo",
+          "author":"W. A Ogden",
+          "url":"songs/song28.html",
+          "number": 28
+          },
+          {
+          "id":"song29",
+          "title":"029 - Yesu Jakwath Moheroae",
+          "author":"Sir H. W.  Baker",
+          "url":"songs/song29.html",
+          "number": 29
+          },
+          {
+          "id":"song30",
+          "title":"030 - Apako Hera Nyasaye Wuora",
+          "author":"J.  G.  Crabbe",
+          "url":"songs/song30.html",
+          "number": 30
+          },
+          {
+          "id":"song31",
+          "title":"031 - Duto Paki, Ruodh Polo",
+          "author":"George William Condery",
+          "url":"songs/song31.html",
+          "number": 31
+          },
+          {
+          "id":"song32",
+          "title":"032 - Koro Ka Wachokore",
+          "author":"Unknown",
+          "url":"songs/song32.html",
+          "number": 32
+          },
+          {
+          "id":"song33",
+          "title":"033 - Wuonwa, Gonywa Gi Gweth Mari",
+          "author":"John Fawcet",
+          "url":"songs/song33.html",
+          "number": 33
+          },
+          {
+          "id":"song34",
+          "title":"034 - Nyasaye Wachungo Ka Wawer",
+          "author":"E.  J.  Horking",
+          "url":"songs/song34.html",
+          "number": 34
+          },
+          {
+          "id":"song35",
+          "title":"035 - Paruru Nying Yesu Koro",
+          "author":"Lillian Baxter",
+          "url":"songs/song35.html",
+          "number": 35
+          },
+          {
+          "id":"song36",
+          "title":"036 - Ruoth Yesu, Nithona",
+          "author":"William Ralf Featherstone",
+          "url":"songs/song36.html",
+          "number": 36
+          },
+          {
+          "id":"song37",
+          "title":"037 - Yesu In Miheroa",
+          "author":"Charles Wesley",
+          "url":"songs/song37.html",
+          "number": 37
+          },
+          {
+          "id":"song38",
+          "title":"038 - Anawer Hera Yesu",
+          "author":"F. E. Belden",
+          "url":"songs/song38.html",
+          "number": 38
+          },
+          {
+          "id":"song39",
+          "title":"039 - Nitie Wer Mamit E Dhoga",
+          "author":"Edwin Othello Excell",
+          "url":"songs/song39.html",
+          "number": 39
+          },
+          {
+          "id":"song40",
+          "title":"040 - Alleluia! Ruoth Nochier",
+          "author":"Robert Lowrey",
+          "url":"songs/song40.html",
+          "number": 40
+          },
+          {
+          "id":"song41",
+          "title":"041 - E Kalwari Jawar Notho",
+          "author":"Unknown",
+          "url":"songs/song41.html",
+          "number": 41
+          },
+          {
+          "id":"song42",
+          "title":"042 - Hera Ma Yesu Hera Go",
+          "author":"J. E Hall",
+          "url":"songs/song42.html",
+          "number": 42
+          },
+          {
+          "id":"song43",
+          "title":"043 - Adwaro Ng`Eyo Wach Yesu",
+          "author":"Francis J.  Crosby",
+          "url":"songs/song43.html",
+          "number": 43
+          },
+          {
+          "id":"song44",
+          "title":"044 – Ang`Eyo Yesu Osewara",
+          "author":"W. A Ogden",
+          "url":"songs/song44.html",
+          "number": 44
+          },
+          {
+          "id":"song45",
+          "title":"045 - Ndalo Mamor",
+          "author":"Edward Francis Rimbault",
+          "url":"songs/song45.html",
+          "number": 45
+          },
+          {
+          "id":"song46",
+          "title":"046 - Chunya Nigi Mor Moloyo",
+          "author":"E. S.  Lorenz",
+          "url":"songs/song46.html",
+          "number": 46
+          },
+          {
+          "id":"song47",
+          "title":"047 - Yesu Jawarwa E Bethlehem Chon",
+          "author":"E. E. Hasty",
+          "url":"songs/song47.html",
+          "number": 47
+          },
+          {
+          "id":"song48",
+          "title":"048 - Yesu Kristo Oberna Ngang`",
+          "author":"Will L. Thompson",
+          "url":"songs/song48.html",
+          "number": 48
+          },
+          {
+          "id":"song49",
+          "title":"049 - Ywaya Machiegni Kodi, Ruodha",
+          "author":"Mrs. C. H. Morris",
+          "url":"songs/song49.html",
+          "number": 49
+          },
+          {
+          "id":"song50",
+          "title":"050 - Kristo Obedo Misango Mar Golo Richo",
+          "author":"Elisha A. Hoffman",
+          "url":"songs/song50.html",
+          "number": 50
+          },
+          {
+          "id":"song51",
+          "title":"051 - Jakwath Nokwayo Rombege",
+          "author":"Ira David Sankey",
+          "url":"songs/song51.html",
+          "number": 51
+          },
+          { 
+          "id":"song52",
+          "title":"052 - Jawar Yesu Itelna",
+          "author":"Edward Hopper",
+          "url":"songs/song52.html",
+          "number": 52
+          },
+          {
+          "id":"song53",
+          "title":"053 - Wapako Ruoth Ma Jawarwaa",
+          "author":"Charles Wesley",
+          "url":"songs/song53.html",
+          "number": 53
+          },
+          {
+          "id":"song54",
+          "title":"054 - Wuod Dhano Ma Ne Othou",
+          "author":"P. P. Bliss",
+          "url":"songs/song54.html",
+          "number": 54
+          },
+          {
+          "id":"song55",
+          "title":"055 - Awero Teko Mar Nyasaye",
+          "author":"Isaac Watts",
+          "url":"songs/song39.html",
+          "number": 55
+          },
+          {
+          "id":"song56",
+          "title":"056 - Ruoth, Awinjo Wach Mar Gwethni",
+          "author":"William Batchelder Bradbury",
+          "url":"songs/song56.html",
+          "number": 56
+          },
+          {
+          "id":"song57",
+          "title":"057 - Roho Mar Nyasaye, Ibina",
+          "author":"Elwood H. Stokes",
+          "url":"songs/song57.html",
+          "number": 57
+          },
+          {
+          "id":"song58",
+          "title":"058 - Muya Maler Jatendwa",
+          "author":"Marcus Morris Wells",
+          "url":"songs/song58.html",
+          "number": 58
+          },
+          {
+          "id":"song59",
+          "title":"059 - Muya Maler, Winj Alamwa",
+          "author":"Andrew Reed",
+          "url":"songs/song59.html",
+          "number": 59
+          },
+          {
+          "id":"song60",
+          "title":"060 - Much Nyasaye, Iler Chutho",
+          "author":"Andrew Reed",
+          "url":"songs/song60.html",
+          "number": 60
+          },
+          {
+          "id":"song61",
+          "title":"061 - Osiep Manade, En Mor Manade",
+          "author":"Elisha A. Hoffman",
+          "url":"songs/song61.html",
+          "number": 61
+          },
+          {
+          "id":"song62",
+          "title":"062 - Onge Osiep Moro Kaka Yesu",
+          "author":"George Crawford Hugg",
+          "url":"songs/song62.html",
+          "number": 62
+          },
+          {
+          "id":"song63",
+          "title":"063 – Ler Wang` Chieng`Orieny E Gode",
+          "author":"Mrs. M. T. Haughey",
+          "url":"songs/song63.html",
+          "number": 63
+          },
+          {
+          "id":"song64",
+          "title":"064 – Kabedo E Tiend Ruoth Yesu",
+          "author":"J. H",
+          "url":"songs/song64.html",
+          "number": 64
+          },
+          {
+          "id":"song65",
+          "title":"065 – Ruodha, Aheri Maradier",
+          "author":"Frances R. Havergal",
+          "url":"songs/song65.html",
+          "number": 65
+          },
+          {
+          "id":"song66",
+          "title":"066 – Aseyudo Osiep Maber",
+          "author":"J. G. Small",
+          "url":"songs/song66.html",
+          "number": 66
+          },
+          {
+          "id":"song67",
+          "title":"067 – Nyasachwa Mondo Obed Kodu",
+          "author":"Jeremiah E. Rankin",
+          "url":"songs/song67.html",
+          "number": 67
+          },
+          {
+          "id":"song68",
+          "title":"068 – Yesu Nowara",
+          "author":"Fanny J. Crosby",
+          "url":"songs/song68.html",
+          "number": 68
+          },
+          {
+          "id":"song69",
+          "title":"069 – Puonja Injili Lilo",
+          "author":"Katherine Hankey A",
+          "url":"songs/song69.html",
+          "number": 69
+          },
+          {
+          "id":"song70",
+          "title":"070 – Nyasaye Wachokore",
+          "author":"John Fawcett",
+          "url":"songs/song70.html",
+          "number": 70
+          },
+          {
+          "id":"song71",
+          "title":"071 –  Puonja Wach Biblos ",
+          "author":"Pricilla J. Owens ",
+          "url":"songs/song71.html",
+          "number": 71
+          },
+          {
+          "id":"song72",
+          "title":"72 – Ahero Weche Mag Nyasaye ",
+          "author":"Unknown",
+          "url":"songs/song72.html",
+          "number": 72
+          },
+          {
+          "id":"song73",
+          "title":"73 – Ahero Nyiso Weche ",
+          "author":"Katherine Hankey",
+          "url":"songs/song73.html",
+          "number": 73
+          },
+          {
+          "id":"song74",
+          "title":"74 – Bende Nichungi E Ndalo Chandruok?",
+          "author":"William James Kirkpatrick",
+          "url":"songs/song74.html",
+          "number": 74
+          },
+          {
+          "id":"song75",
+          "title":"75 – Adwaro Ng`Eyo Wach Yesu ",
+          "author":"Eliza E. Hewitt",
+          "url":"songs/song75.html",
+          "number": 75
+          },
+          {
+          "id":"song76",
+          "title":"76 – Chwoyo Ndalo Duto ",
+          "author":"Knowles Shaw",
+          "url":"songs/song76.html",
+          "number": 76
+          },
+          {
+          "id":"song77",
+          "title":"77 – Kony Joma Dwaro Tho ",
+          "author":"Fanny J. Crosby",
+          "url":"songs/song77.html",
+          "number": 77
+          },
+          {
+          "id":"song78",
+          "title":"78 – Aparo Tinende Kuom Pinyno",
+          "author":"E. E. Hewitt",
+          "url":"songs/song78.html",
+          "number": 78
+          },
+                    {
+          "id":"song79",
+          "title":"79 – Kik Ibadhri Ni Tich ",
+          "author":"Franklin E. Belden",
+          "url":"songs/song79.html",
+          "number": 79
+          },
+          {
+          "id":"song80",
+          "title":"80 – Daher Tiyo Kodi, Ruodha ",
+          "author":"Unknown",
+          "url":"songs/song80.html",
+          "number": 80
+          },
+          {
+          "id":"song81",
+          "title":"81 – Tiuru, Yesu `Biro ",
+          "author":"Lowell Massion ",
+          "url":"songs/song81.html",
+          "number": 81
+          },
+          {
+          "id":"song82",
+          "title":"82 – Ka Manade Ma Ruoth Luongae ",
+          "author":"Mary Brown ",
+          "url":"songs/song82.html",
+          "number": 82
+          },
+          {
+          "id":"song83",
+          "title":"83 – Yesu Osiep Malong`o",
+          "author":"Mary Anne Shorey",
+          "url":"songs/song83.html",
+          "number": 83
+          },
+          {
+          "id":"song84",
+          "title":"84 – Kaparo Yath Mar Kalwari",
+          "author":"Isaac Watts",
+          "url":"songs/song84.html",
+          "number": 84
+          },
+          {
+          "id":"song85",
+          "title":"85 – Tiuru, Tiuru",
+          "author":"Fanny Crosby",
+          "url":"songs/song85.html",
+          "number": 85
+          },
+          {
+          "id":"song86",
+          "title":"86 – Wan Wamor Kwatiyo Ni Ruoth Yesu",
+          "author":"William A. Ogden",
+          "url":"songs/song86.html",
+          "number": 86
+          },
+          {
+          "id":"song87",
+          "title":"87 – Jokeyo Ni Kanye?",
+          "author":"Eben Eugine Rexford",
+          "url":"songs/song87.html",
+          "number": 87
+          },
+          {
+          "id":"song88",
+          "title":"88 – E Dho Wath Man Loka Nam",
+          "author":"Isaiah Baltzel",
+          "url":"songs/song88.html",
+          "number": 88
+          },
+          {
+          "id":"song89",
+          "title":"89 – En Madhiyo Tich Gi Chandruok",
+          "author":"Thomas Hastings",
+          "url":"songs/song89.html",
+          "number": 89
+          },
+          {
+          "id":"song90",
+          "title":"90 – Winjuru Sigandwa Miwuoro",
+          "author":"James M. Gray",
+          "url":"songs/song90.html",
+          "number": 90
+          },
+          {
+          "id":"song91",
+          "title":"91 – Nitie Luong Mobiro E Wi Apaka",
+          "author":"Chas H. Gabriel",
+          "url":"songs/song91.html",
+          "number": 91
+          },
+          {
+          "id":"song92",
+          "title":"92 – Bende Ipuonjo Ji Wach Nyasaye?",
+          "author":"Palmer Hartsough ",
+          "url":"songs/song92.html",
+          "number": 92
+          },
+          {
+          "id":"song93",
+          "title":"93 – Teche Duto Onego Liel ",
+          "author":"F. E. Belden",
+          "url":"songs/song93.html",
+          "number": 93
+          },
+          {
+          "id":"song94",
+          "title":"94 – Yesu Kristo Odwaro Walame ",
+          "author":"Thomas Hastings",
+          "url":"songs/song94.html",
+          "number": 94
+          },
+          {
+          "id":"song95",
+          "title":"95 – Jarit, Go Tung` Mar Injili",
+          "author":"Henry Gilmour",
+          "url":"songs/song95.html",
+          "number": 95
+          },
+          {
+          "id":"song96",
+          "title":"96 – Dhiuru, Jokristo",
+          "author":"Sabine Baring-Gould",
+          "url":"songs/song96.html",
+          "number": 96
+          },
+          {
+          "id":"song97",
+          "title":"97 – Chunya, Mondo Ichiew Koro",
+          "author":"Philip Doddridge",
+          "url":"songs/song97.html",
+          "number": 97
+          },
+          {
+          "id":"song98",
+          "title":"98 – Jo Maler Mag Nyasaye",
+          "author":"John Wade's Cantus Diversi",
+          "url":"songs/song98.html",
+          "number": 98
+          },
+          {
+          "id":"song99",
+          "title":"99 – Chunya, Mond` Iritri",
+          "author":"George Heath",
+          "url":"songs/song99.html",
+          "number": 99
+          },
+          {
+          "id":"song100",
+          "title":"100 – Ok Ageno Gimoro Ngang",
+          "author":"Edward Mote",
+          "url":"songs/song100.html",
+          "number": 100
+          },
+          {
+          "id":"song101",
+          "title":"101 – Chunguru Matek Kuom Ruoth ",
+          "author":"C. R. BlackHall",
+          "url":"songs/song101.html",
+          "number": 101
+          },
+          {
+          "id":"song102",
+          "title":"102 – Rituru, Lemuru",
+          "author":"Robert Lowry",
+          "url":"songs/song102.html",
+          "number": 102
+          },
+          {
+          "id":"song103",
+          "title":"103 – Chungi, Jakristo ",
+          "author":"William F. Sherwin",
+          "url":"songs/song103.html",
+          "number": 103
+          },
+          {
+          "id":"song104",
+          "title":"104 – Waged E Lwanda Mangima ",
+          "author":"Frankline E. Belden",
+          "url":"songs/song104.html",
+          "number": 104
+          },
+          {
+          "id":"song105",
+          "title":"105 – Awuotho Kachiko Polo",
+          "author":"Charles Hutchinson Gabriel",
+          "url":"songs/song105.html",
+          "number": 105
+          },
+          {
+          "id":"song106",
+          "title":"106 – Jarito Mar Dala Zayun ",
+          "author":"Sydney S. Brewer",
+          "url":"songs/song106.html",
+          "number": 106
+          },
+          {
+          "id":"song107",
+          "title":"107 – In Migeno Chamo Mwandu Me Polo",
+          "author":"Lowell Mason",
+          "url":"songs/song107.html",
+          "number": 107
+          },
+          {
+          "id":"song108",
+          "title":"108 – Un Jorit Mar Dala Zayun",
+          "author":"Thomas Hastings",
+          "url":"songs/song108.html",
+          "number": 108
+          },
+          {
+          "id":"song109",
+          "title":"109 – Nyaka Karang`O Ruodhwa",
+          "author":"James G. Deck",
+          "url":"songs/song109.html",
+          "number": 109
+          },
+          {
+          "id":"song110",
+          "title":"110 – Kristo En Jatelowa",
+          "author":"Mrs. Frank A. Breck",
+          "url":"songs/song110.html",
+          "number": 110
+          },
+          {
+          "id":"song111",
+          "title":"111 – Wakwayi, Ruoth, Kuom Tekoni",
+          "author":"William H. Bathurst",
+          "url":"songs/song111.html",
+          "number": 111
+          },
+          {
+          "id":"song112",
+          "title":"112– Keduru Jo Ka Yesu",
+          "author":"George Duffield",
+          "url":"songs/song112.html",
+          "number": 112
+          },
+          {
+          "id":"song113",
+          "title":"113 – Yaye Mad Abed Gi Yie Chutho",
+          "author":"William Hiley Bathurst",
+          "url":"songs/song113.html",
+          "number": 113
+          },
+          {
+          "id":"song114",
+          "title":"114 – Jakristo We Nindo",
+          "author":"Frances James Crosby",
+          "url":"songs/song114.html",
+          "number": 114
+          },
+          {
+          "id":"song115",
+          "title":"115 – Be An Jarit Msalaba",
+          "author":"Isaac Watts ",
+          "url":"songs/song115.html",
+          "number": 115
+          },
+          {
+          "id":"song116",
+          "title":"116 – Biuru, Jo Nyasaye",
+          "author":"Isaac Watts ",
+          "url":"songs/song116.html",
+          "number": 116
+          },
+          {
+          "id":"song117",
+          "title":"117 – Nitie Lweny Mager Ahinya",
+          "author":"William C. Martin",
+          "url":"songs/song117.html",
+          "number": 117
+          },
+          {
+          "id":"song118",
+          "title":"118 – Ndalo Auchiel Oserumo",
+          "author":"Joseph Stennett",
+          "url":"songs/song118.html",
+          "number": 118
+          },
+          {
+          "id":"song119",
+          "title":"119 – Sabato Mari, Ruoth",
+          "author":"Unknown",
+          "url":"songs/song109.html",
+          "number": 119
+          },
+          {
+          "id":"song120",
+          "title":"120 – Ruoth, Wabiro Iri",
+          "author":"120.	Fanny Crosby",
+          "url":"songs/song120.html",
+          "number": 120
+          },
+          {
+          "id":"song121",
+          "title":"121 – Mokwongo Ruodhwa Yesu",
+          "author":"F. E. Belden",
+          "url":"songs/song121.html",
+          "number": 121
+          },
+          {
+          "id":"song122",
+          "title":"122 – Kidira Chieng` Mar Yueyo",
+          "author":"Christopher Wordsworth",
+          "url":"songs/song122.html",
+          "number": 122
+          },
+          {
+          "id":"song123",
+          "title":"123 – In Skul Marwa Mar Sabato",
+          "author":"C. R. Blackall",
+          "url":"songs/song123.html",
+          "number": 123
+          },
+          {
+          "id":"song124",
+          "title":"124 – Walamo Nyasaye Tinde",
+          "author":"John Newton",
+          "url":"songs/song124.html",
+          "number": 124
+          },
+          {
+          "id":"song125",
+          "title":"125 – E Ndaloni Maler Mar Ruoth",
+          "author":"Eliza Lee Follen",
+          "url":"songs/song125.html",
+          "number": 125
+          },
+          {
+          "id":"song126",
+          "title":"126 – Kidich Nyasaye",
+          "author":"Unknown",
+          "url":"songs/song126.html",
+          "number": 126
+          },
+          {
+          "id":"song127",
+          "title":"127 – Nyasaye Gwedh Skundwa Mar Sabato",
+          "author":"Priscilla J. Owens",
+          "url":"songs/song127.html",
+          "number": 127
+          },
+          {
+          "id":"song128",
+          "title":"128 – Ndalo Mamor",
+          "author":"Roswell F. Cottrel",
+          "url":"songs/song128.html",
+          "number": 128
+          },
+          {
+          "id":"song129",
+          "title":"129 – In Odira Mar Nyasayeo",
+          "author":"Ignaz J. Pleyel",
+          "url":"songs/song129.html",
+          "number": 129
+          },
+          {
+          "id":"song130",
+          "title":"130 – Wachokore Gi Mor Tinde",
+          "author":"William B. Bradbury",
+          "url":"songs/song130.html",
+          "number": 130
+          },
+          {
+          "id":"song131",
+          "title":"131 – Nyasaye, Gokiny Mond` Iwinja",
+          "author":"Isaac Watts",
+          "url":"songs/song131.html",
+          "number": 131
+          },
+          {
+          "id":"song132",
+          "title":"132 – Wago Ni Ruoth Erokamano",
+          "author":"Bartholomaus Gesius",
+          "url":"songs/song132.html",
+          "number": 132
+          },
+          {
+          "id":"song133",
+          "title":"133 – Bedi Kod An",
+          "author":"Henry Francis Lyte",
+          "url":"songs/song133.html",
+          "number": 133
+          },
+          {
+          "id":"song134",
+          "title":"134 – Wang` Chieng Koro Podhonwa",
+          "author":"Mary A. Lathbury",
+          "url":"songs/song134.html",
+          "number": 134
+          },
+          {
+          "id":"song135",
+          "title":"135 – Yesu, In Ma Jahoch Mar Chuny",
+          "author":"John Keble",
+          "url":"songs/song135.html",
+          "number": 135
+          },
+          {
+          "id":"song136",
+          "title":"136 – Puothe Chiek E Pinje Duto",
+          "author":"J. O. Thompson",
+          "url":"songs/song136.html",
+          "number": 136
+          },
+          {
+          "id":"song137",
+          "title":"137 – Winji Weche Ma Nondikio",
+          "author":"Helen E. Rasmussen",
+          "url":"songs/song137.html",
+          "number": 137
+          },
+          {
+          "id":"song138",
+          "title":"138 – Richona Diluok Gang`o?",
+          "author":"Robert Lowry",
+          "url":"songs/song138.html",
+          "number": 138
+          },
+          {
+          "id":"song139",
+          "title":"139 – Ringra Namiyo Inwa",
+          "author":"Frances R. Havergal",
+          "url":"songs/song139.html",
+          "number": 139
+          },
+          {
+          "id":"song140",
+          "title":"140 – Adwaro Manyo Rombea",
+          "author":"William A. Ogden",
+          "url":"songs/song140.html",
+          "number": 140
+          },
+          {
+          "id":"song141",
+          "title":"141 – Yesu Oluongoi Mondo Ibi",
+          "author":"George Coles Stebbins",
+          "url":"songs/song141.html",
+          "number": 141
+          },
+          {
+          "id":"song142",
+          "title":"142 – Nitie Wendo E Dhoot",
+          "author":"Edwin Othello Excell",
+          "url":"songs/song142.html",
+          "number": 142
+          },
+          {
+          "id":"song143",
+          "title":"143 – Yesu Oluongowa Koro",
+          "author":"Will L. Thompson",
+          "url":"songs/song143.html",
+          "number": 143
+          },
+          {
+          "id":"song144",
+          "title":"144 – Nawinjo Yesu Kowacho",
+          "author":"Horatius Bonar",
+          "url":"songs/song144.html",
+          "number": 144
+          },
+          {
+          "id":"song145",
+          "title":"145 – Yesu Jakwath Madieri",
+          "author":"William A. Ogden",
+          "url":"songs/song145.html",
+          "number": 145
+          },
+          {
+          "id":"song146",
+          "title":"146 – Winji Dwond Yesu Kawuono",
+          "author":"Daniel March",
+          "url":"songs/song146.html",
+          "number": 146
+          },
+          {
+          "id":"song147",
+          "title":"147 – Wasewinjo Wach Maber",
+          "author":"William James Kirkpatrick",
+          "url":"songs/song147.html",
+          "number": 147
+          },
+          {
+          "id":"song148",
+          "title":"148 – Ng`A Mowinjo Dwond Ruoth",
+          "author":"Philip Paul Bliss",
+          "url":"songs/song148.html",
+          "number": 148
+          },
+          {
+          "id":"song149",
+          "title":"149 – Dhoranga Polo Yawore",
+          "author":"Lydia O. Baxter",
+          "url":"songs/song149.html",
+          "number": 149
+          },
+          {
+          "id":"song150",
+          "title":"150 – Jathieth Maduong` Osudo Ka",
+          "author":"William Hunter",
+          "url":"songs/song150.html",
+          "number": 150
+          },
+          {
+          "id":"song151",
+          "title":"151 – Richo Oketho Ji Malit",
+          "author":"John Stockton",
+          "url":"songs/song151.html",
+          "number": 151
+          },
+          {
+          "id":"song152",
+          "title":"152 – Yesu Okadho",
+          "author":"Frankline E. Belden",
+          "url":"songs/song152.html",
+          "number": 152
+          },
+          {
+          "id":"song153",
+          "title":"153 – Ngima Machiek Mawango!",
+          "author":"William James Kirkpatrick",
+          "url":"songs/song153.html",
+          "number": 153
+          },
+          {
+          "id":"song154",
+          "title":"154 – Yie Yesu Odonj E Chunyi",
+          "author":"Leila N. Morris",
+          "url":"songs/song154.html",
+          "number": 154
+          },
+          {
+          "id":"song155",
+          "title":"155 – Be Iseyudo Jawar Maber?",
+          "author":"Ida L. Reed",
+          "url":"songs/song155.html",
+          "number": 155
+          },
+          {
+          "id":"song156",
+          "title":"156 – Bi Ka Yesu",
+          "author":"Edward Payson Hammond",
+          "url":"songs/song156.html",
+          "number": 156
+          },
+          {
+          "id":"song157",
+          "title":"157 – Winji Jawar Ni E Dhoot",
+          "author":"L. H. Parthmore",
+          "url":"songs/song157.html",
+          "number": 157
+          },
+          {
+          "id":"song158",
+          "title":"158 – Un Jo Mojony, Biuru",
+          "author":"W. Chatterton Dix",
+          "url":"songs/song158.html",
+          "number": 158
+          },
+          {
+          "id":"song159",
+          "title":"159 – Chungo E Adiera Kaka Daniel",
+          "author":"Philip P. Bliss",
+          "url":"songs/song159.html",
+          "number": 159
+          },
+          {
+          "id":"song160",
+          "title":"160 – Nitie Remo Ma Nochwer",
+          "author":"William Cowper",
+          "url":"songs/song160.html",
+          "number": 160
+          },
+          {
+          "id":"song161",
+          "title":"161 – Ruoth Yesu, Agomobo Bedo Ng`ati",
+          "author":"James Nicholson",
+          "url":"songs/song161.html",
+          "number": 161
+          },
+          {
+          "id":"song162",
+          "title":"162 – Abiro Ni Msalaba",
+          "author":"Wiliam Gustavus Fischer",
+          "url":"songs/song162.html",
+          "number": 162
+          },
+          {
+          "id":"song163",
+          "title":"163 – Agombo Bedo Gi Ruodha",
+          "author":"F. H. Byshe",
+          "url":"songs/song163.html",
+          "number": 163
+          },
+          {
+          "id":"song164",
+          "title":"164 – Analu Bang` Yesu",
+          "author":"Elisha Albright Hoffman",
+          "url":"songs/song164.html",
+          "number": 164
+          },
+          {
+          "id":"song165",
+          "title":"165 – Asebayo Mabor Kod Ruoth",
+          "author":"William J. Kirkpatrick",
+          "url":"songs/song165.html",
+          "number": 165
+          },
+          {
+          "id":"song166",
+          "title":"166 – Jawar Owachona",
+          "author":"Elvira M. Hall",
+          "url":"songs/song166.html",
+          "number": 166
+          },
+          {
+          "id":"song167",
+          "title":"167 – Yesu, Kar Msalabani",
+          "author":"Fanny J. Crosby",
+          "url":"songs/song167.html",
+          "number": 167
+          },
+          {
+          "id":"song168",
+          "title":"168 – Duto Amiyo Ruoth Yesu",
+          "author":"J. W. VenDeVenter",
+          "url":"songs/song168.html",
+          "number": 168
+          },
+          {
+          "id":"song169",
+          "title":"169 – Yesu Luongi, We Ting`Ni Mar Richo",
+          "author":"Lewis P. Jones",
+          "url":"songs/song169.html",
+          "number": 169
+          },
+          {
+          "id":"song170",
+          "title":"170 – Nitie Ng`Ama Noyie Tho Mondo Owara",
+          "author":"Mrs. Frank A. Breck",
+          "url":"songs/song170.html",
+          "number": 170
+          },
+          {
+          "id":"song171",
+          "title":"171 – In Kiol Nikech Chandruok",
+          "author":"Jeremiah Eames Rankin",
+          "url":"songs/song171.html",
+          "number": 171
+          },
+          {
+          "id":"song172",
+          "title":"172 – Nitie Ngima Kwang`Iyo Msalaba",
+          "author":"Franklin E. Belden",
+          "url":"songs/song172.html",
+          "number": 172
+          },
+          {
+          "id":"song173",
+          "title":"173 – Ka Satan Otemi",
+          "author":"Edwin Othello Excell",
+          "url":"songs/song173.html",
+          "number": 173
+          },
+          {
+          "id":"song174",
+          "title":"174 – Anayie Ruoth Yesu Kende",
+          "author":"George C. Stebbins",
+          "url":"songs/song174.html",
+          "number": 174
+          },
+          {
+          "id":"song175",
+          "title":"175 – Geno Kristo Kelonwa Mor",
+          "author":"Besie Doolittle",
+          "url":"songs/song175.html",
+          "number": 175
+          },
+          {
+          "id":"song176",
+          "title":"176 – Nyasaye Noolnwa Gweth Polo",
+          "author":"Daniel W. Whittle",
+          "url":"songs/song166.html",
+          "number": 176
+          },
+          {
+          "id":"song177",
+          "title":"177 – Ka Chandruok Osudo Machiegni Kodi ",
+          "author":"Irvin H. Mack",
+          "url":"songs/song177.html",
+          "number": 177
+          },
+          {
+          "id":"song178",
+          "title":"178 – Beduru Gi Yie",
+          "author":"Unknown",
+          "url":"songs/song178.html",
+          "number": 178
+          },
+          {
+          "id":"song179",
+          "title":"179 – Chunyi Dich Nikech Parruok ",
+          "author":"Mary D. James",
+          "url":"songs/song179.html",
+          "number": 179
+          },
+          {
+          "id":"song180",
+          "title":"180 – Un Muhero Ruodh Polo",
+          "author":"George Burder",
+          "url":"songs/song180.html",
+          "number": 180
+          }
+
+         
+      ]
+    }
+  </script>
+  <script src="package/dist/sweetalert2.all.min.js"></script>
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  
+  </body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>song 5</title>
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/css2?family=Muli:wght@500&display=swap" rel="stylesheet">
+  <link href="../css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="../MaterialDesignFonts/css/materialdesignicons.min.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+
+</head>
+<body  style="font-family: 'Muli', sans-serif;" id="song5">
+  <header>
+    <div class="navbar-fixed">
+      <nav class="" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" style="font-size: 20px;">SDAH - 5 </a>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="mdi mdi-menu"></i></a>
+        </div>
+      </nav>
+  
+    </div>
+    <ul id="nav-mobile" class="sidenav sidenav-fixed">
+      <li>
+        <div class="background">
+          <div class="carousel carousel-slider center">
+            <div class="carousel-fixed-item">
+              <div class="card" style="width: 200px; opacity: 0.8;">
+                <p style="font-weight: bolder; font-size: 20px;">SDA Hymnals</p>
+              </div>
+            </div>
+            <div class="carousel-item" href="#one!">
+              <img src="../img/nature.jpg" alt="">
+            </div>
+            <div class="carousel-item" href="#two!">
+              <img src="../img/lion.jpg" alt="">
+            </div>
+            <div class="carousel-item" href="#three!">
+              <img src="../img/sunflower.jpeg" alt="">
+            </div>
+            <div class="carousel-item" href="#four!">
+              <img src="../img/veges.jpeg" alt="">
+            </div>
+          </div>
+        </div>
+      </li>
+      <li><a href="../index.html"><i class="mdi mdi-format-list-bulleted mdi-24px"></i>Topical Index</a></li>
+      <li><a href="../favorites.html"><i class="mdi mdi-heart mdi-24px"></i>Favorites</a></li>
+      <li><a href="#modal1" class="modal-trigger"><i class="mdi mdi-dialpad mdi-24px"></i>Search</a></li>
+      <li><a class="subheader">Information</a></li>
+      <li><a href="../settings.html"><i class="mdi mdi-settings mdi-24px"></i>Settings</a></li>
+      <li><a href="#" id="sendEmail"><i class="mdi mdi-help-circle mdi-24px"></i>Help & Feedback</a></li>
+      <li><a id="aboutApp"><i class="mdi mdi-information-outline mdi-24px"></i>About</a></li>
+      <li><a id="toggle" class="dark-toggle" href="#" onclick="switchMode()" title="Dark/light"><i class="mdi mdi-brightness-4 mdi-24px"></i> Light/Dark</a></li>
+
+    </ul>
+  </header>
+
+  <main> 
+    <div class="row">
+      <div class="col m12">
+        <div class="song" style="padding: 10px;">
+            <h5>005 To Pakuru Ruoth</h5>
+            <h6>SDAH 83 O Worship the King</h6>
+            <h6 style="color: orange;">Doh en G</h6>
+            <div style="font-size: 17px;">
+              <p>
+                <b style="color: rgb(0, 114, 0); font-size: 18px;">1</b> <br>
+                To pakuru Ruoth me polo malo;
+                Weruru maber: ohero adier;
+                En lwanda mageno, Makonyo duto;
+                Mosiko mochwere, mipako chutho.
+
+                
+                
+
+            </p>
+            
+            <p>
+                <b style="color: rgb(0, 114, 0); font-size: 18px;">2</b> <br>
+                To paruru piny, en hono maduong`,
+                Gi nam, kodi yien, gi gode kod lum;
+                Wawuoro ngang` rieko maloso kama;
+                wapako Nyasachwa manyisowa ma.
+
+                
+
+
+            </p>
+            <p>
+                <b style="color: rgb(0, 114, 0); font-size: 18px;">3</b><br>
+                Gik moko me piny onyisowa ma,
+                Nyasachwa oduong`, oler adiera;
+                Oherowa duto gotieno gokinyi;
+                Omiyowa ngima, orito mang`won.
+
+
+            </p>
+            <p>
+                <b style="color: rgb(0, 114, 0); font-size: 18px;">4</b><br>
+                Jo malaika gipako mamor,
+                Jatelo maduong` mohero jopiny;
+                To wan jo mireso wadende maber,
+                Wapaki adiera kama nyaka chieng`.
+
+
+              <br><br><br><br><br><br>
+            </p>
+            </div>
+            
+        </div>
+        
+      </div>
+      
+    </div>
+    <div class="fixed-action-btn">
+      <a class="btn-floating btn-large green darken-3">
+        <i class="mdi mdi-plus"></i>
+      </a>
+      <ul>
+        <li><a class="btn-floating red addFavorites" href="#"><i class="mdi mdi-heart-outline"></i></a></li>
+        <li><a class="btn-floating yellow darken-3"><i class="mdi mdi-share"></i></a></li>
+        <li><a class="btn-floating green"><i class="mdi mdi-itunes"></i></a></li>
+        <li><a class="btn-floating blue modal-trigger" href="#modal1"><i class="mdi mdi-dialpad"></i></a></li>
+      </ul>
+      <script>
+        document.addEventListener('DOMContentLoaded', function(){
+          var elems = document.querySelectorAll('.fixed-action-btn');
+          var instances = M.FloatingActionButton.init(elems, {
+            direction: 'left',
+            hoverEnabled: false
+          });
+        });
+      </script>
+    </div>
+
+    <div id="modal1" class="modal modal-fixed-footer">
+      <div class="modal-content">
+        <div class="row">
+          <div class="col s11 m11">
+              <div class="input-field col s12 m12">
+                <input disabled class="validate" type="tel" id="search" style="font-size: 30px;">
+                <i class="mdi mdi-backspace prefix" id="delete" style="cursor: pointer;"></i>
+              </div>
+          </div>
+        </div>
+        <table class="centered table-small">
+          
+          <tbody>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="1">1</button></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="2">2</button></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="3">3</button></td>
+          </tbody>
+          <tbody>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="4">4</button></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="5">5</button></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="6">6</button></td>
+          </tbody>
+          <tbody>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="7">7</button></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="8">8</button></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="9">9</button></td>
+          </tbody>
+          <tbody>
+            <td></td>
+            <td><button class="btn-flat btn-floating btn-large waves-effect number" style="font-size: 30px;" id="0">0</button></td>
+            <td></td>
+          </tbody>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn green darken-3 waves-effect" id="findSong">search</a>
+        <a href="#" class="modal-close btn green darken-3 waves-effect">cancel</a>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="page-footer orange">
+      <div class="container center">
+      Made with <i class="mdi mdi-heart" style="color: red;"></i> by Brian Owino</a> <br>
+      Inspired by <a class="orange-text text-lighten-3" href="http://materializecss.com">Materialize</a> <br>
+      </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="../js/jquery-3.4.1.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      $('.modal').modal();
+    })
+  </script>
+  <script>
+    var data = {
+      "songs": [
+          {
+            "id":"song1",
+            "title":"001 - Nyasachwa man Malo",
+            "author":"Reginald herber",
+            "url":"song1.html",
+            "number": 1
+          },
+          {
+            "id":"song2",
+            "title":"002 - Wapaki Nyasaye",
+            "author":"Wm p. Mackay",
+            "url":"song2.html",
+            "number": 2
+          },
+          {
+            "id":"song3",
+            "title":"003 - Duong Obed ni Wuonwa",
+            "author":"Fanny J.  Crosby",
+            "url":"song3.html",
+            "number": 3
+          },
+          {
+            "id":"song4",
+            "title":"004 - Nying Yesu Mondo Yudi Pak",
+            "author":"Edward Perronet",
+            "url":"song4.html",
+            "number": 4
+          },
+          {
+            "id":"song5",
+            "title":"005 - To Pakuru Ruoth",
+            "author":"Robert Grant",
+            "url":"song5.html",
+            "number": 5
+          },
+          {
+            "id":"song6",
+            "title":"006 - Wuonwa Wabironi",
+            "author":"W.  J.  Bostwick",
+            "url":"song6.html",
+            "number": 6
+          },
+          {
+            "id":"song7",
+            "title":"007 - Nyasaye Indi Jakonywa",
+            "author":"Isaac Watts",
+            "url":"song7.html",
+            "number": 7
+          },
+          {
+            "id":"song8",
+            "title":"008 - Winji Yuakna",
+            "author":"W.  H.  Doane",
+            "url":"song8.html",
+            "number": 8
+          },
+          {
+            "id":"song9",
+            "title":"009 - Jachuechna Gi Ruotha",
+            "author":"Anne Steele",
+            "url":"song9.html",
+            "number": 9
+          },
+          {
+            "id":"song10",
+            "title":"010 - Kristo In Wuon Ng'uono Duto",
+            "author":"Robert Robinson",
+            "url":"song10.html",
+            "number": 10
+          },
+          {
+            "id":"song11",
+            "title":"011 - Yesu Isesingo",
+            "author":"Dr. W.o. Perkins",
+            "url":"song11.html",
+            "number": 11
+          },
+          {
+            "id":"song12",
+            "title":"012 - Ji Duto Mondo Wer Wendni",
+            "author":"R.E Hudson",
+            "url":"song12.html",
+            "number": 12
+          },
+      ]
+    }
+  </script>
+  <script src="../package/dist/sweetalert2.all.min.js"></script>
+  <script src="../js/favorite.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/materialize.js"></script>
+  <script src="../js/init.js"></script>
+
+  </body>
+</html>

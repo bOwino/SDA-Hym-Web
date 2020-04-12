@@ -1,0 +1,87 @@
+$transition-effects: color 1s ease, background-color 1s ease;
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@500&display=swap');
+
+header, main, footer{
+    padding-left: 300px;
+    
+    
+}
+
+
+body{
+    font-family: 'Muli', sans-serif;
+    background-color: #eee;
+    transition: $transition-effects;
+
+    nav{
+        background-color: #2E7D32;
+        transition: $transition-effects;
+
+    }
+    .sidenav{
+        transition: $transition-effects;
+
+    }
+ &.dark{
+     background-color: #303030;
+     color: #fff;
+
+
+    #cardtext{
+        color: #fff;
+    }
+    #toggle{
+        color: #fff;
+    }
+     nav{
+         background-color: #212121;
+     }
+     .card{
+        background-color: #424242;
+        
+     }
+     .btn{
+        background-color: #ee6f73;
+     }
+     
+     .sidenav{
+         background-color: #212121;
+         
+         a{
+             color: #fff;
+             i{
+                 color: #eee;
+             }
+         }
+     }
+     .collection-item{
+         background-color: #424242;
+
+         #toggle{
+             color: #fff;
+         }
+     }
+     .modal{
+         background-color: #202123;
+         #search{
+            color: #fff;
+ 
+         }
+         .number{
+             color: #fff;
+         }
+         .modal-footer{
+            background-color: #202123;
+
+         }
+         
+     }
+ }
+}
+
+
+@media only screen and (max-width: 992px){
+    header, main, footer{
+        padding-left: 0;
+    }
+}

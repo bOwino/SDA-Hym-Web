@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@500&display=swap");
+header, main, footer {
+  padding-left: 300px;
+}
+
+body {
+  font-family: 'Muli', sans-serif;
+  background-color: #eee;
+  -webkit-transition: color 1s ease, background-color 1s ease;
+  transition: color 1s ease, background-color 1s ease;
+}
+
+body nav {
+  background-color: #2E7D32;
+  -webkit-transition: color 1s ease, background-color 1s ease;
+  transition: color 1s ease, background-color 1s ease;
+}
+
+body .sidenav {
+  -webkit-transition: color 1s ease, background-color 1s ease;
+  transition: color 1s ease, background-color 1s ease;
+}
+
+body.dark {
+  background-color: #303030;
+  color: #fff;
+}
+
+body.dark #cardtext {
+  color: #fff;
+}
+
+body.dark #toggle {
+  color: #fff;
+}
+
+body.dark nav {
+  background-color: #212121;
+}
+
+body.dark .card {
+  background-color: #424242;
+}
+
+body.dark .btn {
+  background-color: #ee6f73;
+}
+
+body.dark .sidenav {
+  background-color: #212121;
+}
+
+body.dark .sidenav a {
+  color: #fff;
+}
+
+body.dark .sidenav a i {
+  color: #eee;
+}
+
+body.dark .collection-item {
+  background-color: #424242;
+}
+
+body.dark .collection-item #toggle {
+  color: #fff;
+}
+
+body.dark .modal {
+  background-color: #202123;
+}
+
+body.dark .modal #search {
+  color: #fff;
+}
+
+body.dark .modal .number {
+  color: #fff;
+}
+
+body.dark .modal .modal-footer {
+  background-color: #202123;
+}
+
+@media only screen and (max-width: 992px) {
+  header, main, footer {
+    padding-left: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
